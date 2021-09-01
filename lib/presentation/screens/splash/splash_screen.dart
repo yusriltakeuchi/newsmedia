@@ -30,11 +30,31 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Widget _logoWidget() {
     return Center(
-      child: Text(
-        "News Media",
-        style: styleTitle.copyWith(
-          fontSize: setFontSize(40)
-        ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: primaryColor),
+              shape: BoxShape.circle
+            ),
+            child: Padding(
+              padding: EdgeInsets.all(10),
+              child: Icon(
+                Icons.location_city, 
+                color: primaryColor, 
+                size: 80,
+              ),
+            ),
+          ),
+          SizedBox(height: setHeight(20)),
+          Text(
+            "News Media",
+            style: styleTitle.copyWith(
+              fontSize: setFontSize(50)
+            ),
+          ),
+        ],
       ),
     );
   }
