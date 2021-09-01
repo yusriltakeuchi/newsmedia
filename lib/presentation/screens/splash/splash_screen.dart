@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
       child: Text(
         "News Media",
         style: styleTitle.copyWith(
-          fontSize: setFontSize(30)
+          fontSize: setFontSize(40)
         ),
       ),
     );

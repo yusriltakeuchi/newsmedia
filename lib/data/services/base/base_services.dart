@@ -2,8 +2,10 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:newsmedia/data/services/base/endpoint.dart';
 import 'package:newsmedia/injector.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 enum RequestType {GET, POST}
 
@@ -16,6 +18,13 @@ class BaseServices {
       receiveTimeout: 120000,
       contentType: 'application/json',
     ));
+    /// Only show logging in debug mode
+    if (kDebugMode) {
+      _dio.interceptors.add(PrettyDioLogger(
+        requestBody: true,
+        requestHeader: true
+      ));
+    }
   }
 
   /// Base service request to fetch api with parameter [url], [type]. 
