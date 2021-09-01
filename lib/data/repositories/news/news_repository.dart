@@ -8,10 +8,10 @@ class NewsRepository {
   /// Initialize injector
   final newsServices = injector<NewsServices>();
 
-  /// Get headlines with dynamic parameter
-  Future<List<NewsModel>> getHeadlines({Map<String, dynamic>? param}) async {
+  /// Get news with dynamic parameter
+  Future<List<NewsModel>> getNews({Map<String, dynamic>? param}) async {
     try {
-      var response = await newsServices.getHeadline(param: param);
+      var response = await newsServices.getNews(param: param);
       List<NewsModel> _news = [];
 
       /// Check data first before convert to model

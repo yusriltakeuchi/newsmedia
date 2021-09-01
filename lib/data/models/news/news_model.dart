@@ -29,3 +29,18 @@ class NewsModel {
     );
   }
 }
+
+class FilterNewsModel {
+  String? country;
+  int? page;
+
+  FilterNewsModel({
+    this.country,
+    this.page
+  });
+
+  Map<String, dynamic> toJson() => {
+    "country": this.country,
+    "page": this.page
+  };
+}

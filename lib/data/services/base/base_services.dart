@@ -18,6 +18,8 @@ class BaseServices {
     ));
   }
 
+  /// Base service request to fetch api with parameter [url], [type]. 
+  /// And also support for optional parameter like [param] for GET and  [data] for POST method
   Future<Map<String, dynamic>> request(String url, RequestType type, {Map<String, dynamic>? data, Map<String, dynamic>? param}) async {
     try {
       Response? response;
