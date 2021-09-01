@@ -8,6 +8,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 Color primaryColor = Colors.blue;
 Color blackColor = Colors.black;
 
+/// --------------
+/// Credentials access
+/// --------------
+String apiKey = "5f00d331dfd24c32a3e34d70cae204b6";
+
 /// ------------
 /// Device Size
 /// ------------
