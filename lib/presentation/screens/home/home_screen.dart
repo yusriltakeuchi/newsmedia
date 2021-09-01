@@ -66,7 +66,10 @@ class _HomeBodyState extends State<HomeBody> {
       shrinkWrap: true,
       itemCount: _news?.length,
       itemBuilder: (context, index) {
-        return NewsItem(news: _news?[index]);        
+        return NewsItem(
+          news: _news?[index],
+          onClick: () {},
+        );        
       },
     );
   }
