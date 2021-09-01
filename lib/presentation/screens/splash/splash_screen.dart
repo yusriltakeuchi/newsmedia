@@ -11,7 +11,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void moveToHome() async {
     await Future.delayed(Duration(seconds: 1));
-    Navigator.pushNamed(context, routeHome);
+    Navigator.pushNamedAndRemoveUntil(context, routeHome, (route) => false);
   }
 
   @override

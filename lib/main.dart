@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
         title: "News Media",
         theme: ThemeData(
           primarySwatch: Colors.blue,
+          fontFamily: "DMSans"
         ),
         onGenerateRoute: routerGenerator.generate,
         initialRoute: routeSplash,
