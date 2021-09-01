@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:newsmedia/injector.dart';
 import 'package:newsmedia/presentation/router/route_name.dart';
 import 'package:newsmedia/presentation/router/router_generator.dart';
 
 void main() {
+  /// Initialize injector
+  setupInjector();
   runApp(MyApp(
     routerGenerator: RouterGenerator(),
   ));
